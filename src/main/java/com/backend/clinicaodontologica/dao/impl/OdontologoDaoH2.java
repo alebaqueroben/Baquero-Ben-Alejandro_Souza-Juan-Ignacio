@@ -10,9 +10,11 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+
+
 public class OdontologoDaoH2 implements IDao<Odontologo> {
 
-    private final Logger LOGGER = Logger.getLogger(OdontologoDaoH2.class);
+    private final Logger LOGGER = LoggerFactory.getLogger(OdontologoDaoH2.class);
 
     @Override
     public Odontologo registrar(Odontologo odontologo) {
