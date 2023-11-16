@@ -32,8 +32,9 @@ public class OdontologoDaoH2 implements IDao<Odontologo> {
             preparedStatement.execute();
 
 
-            ResultSet resultSet = preparedStatement.getGeneratedKeys();
+
             nuevoOdontologo = new Odontologo(odontologo.getNumeroMatricula(), odontologo.getNombre(), odontologo.getApellido());
+            ResultSet resultSet = preparedStatement.getGeneratedKeys();
             while (resultSet.next()) {
                 nuevoOdontologo.setId(resultSet.getInt(1));
             }
