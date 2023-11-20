@@ -5,6 +5,7 @@ import com.backend.clinicaodontologica.model.Odontologo;
 import com.backend.clinicaodontologica.service.impl.OdontologoService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -17,6 +18,7 @@ public class OdontologoServiceTest {
     private OdontologoService odontologoService = new OdontologoService(new OdontologoDaoH2());
 
 /*
+    @BeforeAll
     static void doBefore() {
         Connection connection = null;
         try {
@@ -38,8 +40,11 @@ public class OdontologoServiceTest {
     @Test
     public void deberiaAgregarUnOdontologo() {
         Odontologo odontologo = new Odontologo("12345", "Gerardo", "Arias");
+        Odontologo odontologo2 = new Odontologo("12344", "Andres", "Arias");
         Odontologo nuevoOdontologo = odontologoService.registrarOdontologo(odontologo);
+        Odontologo nuevoOdontologo2 = odontologoService.registrarOdontologo(odontologo2);
         Assertions.assertTrue(nuevoOdontologo.getId() != 0);
+        Assertions.assertTrue(nuevoOdontologo2.getId() != 0);
     }
 
 
