@@ -1,24 +1,27 @@
 package com.backend.clinicaodontologica;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
+import org.modelmapper.ModelMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 
+
+@SpringBootApplication
 public class ClinicaOdontologicaApplication {
-    //https://docs.google.com/document/d/1YOVKL9we1jfbmmZrV9ULov7s1D4eFoxS5YTNMVy8C6A/edit
-    public static void main(String[] args) {
-        Connection connection = null;
-        try {
-            Class.forName("org.h2.Driver");
-            connection = DriverManager.getConnection("jdbc:h2:~/parcial;INIT=RUNSCRIPT FROM 'create1.sql'", "sa", "sa");
 
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                connection.close();
-            } catch (Exception ex) {
-                ex.printStackTrace();
-            }
-        }
+    private static Logger logger = LoggerFactory.getLogger(ClinicaOdontologicaApplication.class);
+
+    public static void main(String[] args) {
+        SpringApplication.run(ClinicaOdontologicaApplication.class, args);
+        logger.info("ClinicaOdontologica is now running...");
     }
+
+
+    @Bean
+    public ModelMapper modelMapper() {
+        return new ModelMapper();
+    }
+
 }
