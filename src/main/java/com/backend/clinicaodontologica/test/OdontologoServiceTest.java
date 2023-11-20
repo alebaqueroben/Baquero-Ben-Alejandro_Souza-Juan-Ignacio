@@ -1,14 +1,11 @@
 package com.backend.clinicaodontologica.test;
 
 import com.backend.clinicaodontologica.dao.impl.OdontologoDaoH2;
-import com.backend.clinicaodontologica.model.Odontologo;
+import com.backend.clinicaodontologica.entity.Odontologo;
 import com.backend.clinicaodontologica.service.impl.OdontologoService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.Test;
-import org.junit.jupiter.api.BeforeAll;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.util.List;
 
 import static org.junit.Assert.assertFalse;

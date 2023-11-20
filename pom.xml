@@ -14,7 +14,7 @@
 	<artifactId>clinica-odontologica</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>clinica-odontologica</name>
-	<description>Proyecto de Clinica Odontologica</description>
+	<description>Proyecto Clinica Odontologica</description>
 
 
 	<properties>
@@ -32,7 +32,7 @@
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 			<version>2.1.214</version>
-			<scope>test</scope>
+			<scope>runtime</scope>
 		</dependency>
 
 

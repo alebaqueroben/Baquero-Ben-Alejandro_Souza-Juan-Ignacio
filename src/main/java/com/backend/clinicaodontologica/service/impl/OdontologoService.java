@@ -1,7 +1,7 @@
 package com.backend.clinicaodontologica.service.impl;
 
 import com.backend.clinicaodontologica.dao.IDao;
-import com.backend.clinicaodontologica.model.Odontologo;
+import com.backend.clinicaodontologica.entity.Odontologo;
 
 import java.util.List;
 
